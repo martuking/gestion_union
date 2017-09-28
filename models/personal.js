@@ -18,13 +18,13 @@ var personal = new Schema({
 	porcentajeCom: Number,
 	afp : String,
 	cargas : Number,
-	inval : Number,
+	inval : Boolean,
 	isapre : String,
 	tramo : Number,
 	dosPorciento : Boolean,
-	grat : Boolean,
+	gratificacion : Boolean,
 	montoPactado : Number
-	porcentajeZona : Number,
+	porcentajeZona : Boolean,
 	// documento acusete que le importa a la administracion, opcional
 	fechaTerminoContrato : Date,
 	// documento acusete que le importa a la administracion, opcional
