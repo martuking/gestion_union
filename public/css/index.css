@@ -29,3 +29,10 @@ padding: 15px;
 }
 .row.content {height:auto;} 
 }
+
+.buttonGroup{
+  padding: 5%;
+  margin-top: 2%;
+  display: block;
+  position: relative;
+}
