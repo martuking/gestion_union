@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var personal = new Schema({
+var personalSchema = new Schema({
 	
 	cod : String,
 	apellido1 : String,
@@ -24,12 +24,68 @@ var personal = new Schema({
 	dosPorciento : Boolean,
 	gratificacion : Boolean,
 	montoPactado : Number
-	porcentajeZona : Boolean,
-	// documento acusete que le importa a la administracion, opcional
-	fechaTerminoContrato : Date,
-	// documento acusete que le importa a la administracion, opcional
-	fechaTerminoDocumento : Date,
-},
+	porcentajeZona : Boolean
 	{timestap : true});
 
-module.exports = ModelClass;
+create = function(json){
+	var newPersonal = new personal({
+		cod : json.cod,
+		apellido1 : json.apellido1,
+		apellido2 : json.apellido2,
+		nombre : json.nombre,
+		rut : json.rut,
+		domicilio : json.domicilio,
+		cargo : json.cargo,
+		dp : json.dp,
+		sexo : json.sexo,
+		fechaNacimiento : json.fechaNacimiento,
+		fechaIngreso : json.fechaIngreso,
+		sueldoBase : json.sueldoBase,
+		estadoCivil : json.estadoCivil,
+		porcentajeCom : json.porcentajeCom,
+		afp : json.afp,
+		cargas : json.cargas,
+		inval : json.inval,
+		isapre : json.isapre,
+		tramo : json.tramo,
+		dosPorciento : json.dosPorciento,
+		gratificacion : json.gratificacion,
+		montoPactado : json.montoPactado,
+		porcentajeZona : json.porcentajeZona
+	});
+	personal.save(function(err){
+		if (err) {
+      		return console.log("Ocurrio un error al guardar nuevo personal en la base de datos");
+		}
+		else{
+			return console.log("Se guardo correctamente nuevo personal");
+		}});
+	}
+
+
+show = function(){
+	personal.find({}, function(err, personal) {
+  		if (err){
+  			return console.log("Ocurrio un error al cargar el personal")
+  		}
+  		console.log(personal);
+  		return json(personal);
+	});
+	}
+
+
+delete = function(rutPersonal){
+	User.find({ rut: rutPersonal }, function(err, personal) {
+  		if (err){
+  			return console.log("Ocurrio un error al  intentar eliminar el personal seleccionado");
+  		}
+	  	personal.remove(function(err) {
+	    	if (err){
+	    		return console.log("Ocurrio un error al eleminar el personal dentro del metodo remove")
+	    	}
+
+	    	console.log('User successfully deleted!');
+  		});
+	});
+}
+module.exports = mongoose.model('personal',personalSchema);
