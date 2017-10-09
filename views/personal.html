@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Personal Union</title>
+		<title>Sistema De Gestion Union/personal</title>
 		<link href="css/personal.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<h1>Estamos en personal.html</h1>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Unión Gestion</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="principal"  >Principal</a></li>
+		      <li><a href="ofertas">Ofertas</a></li>
+		      <li><a href="servicios">Servicios</a></li>
+		      <li class="active"><a href="personal">Personal</a></li>
+		      <li><a href="taller">Taller</a></li>
+		      <li><a href="respuestos">Repuestos</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="container-fluid text-center">    
+		  <div class="row content">
+		    <div class="col-sm-2 sidenav">
+		      <div class="btn-group-vertical">
+		      	<button type="button"class="btn btn-primary">Agregar</button>
+		      	<button type="button"class="btn btn-primary">Actualizar</button>
+		      	<button type="button"class="btn btn-primary">Eliminar</button>
+		      </div>
+		    </div>
+		    <div class="col-sm-8 text-left "> 
+		      <div id="principal">
+  				<h1>Personal</h1>
+	      		<p>Pagina personal del sistema de gestion de Union S.A.</p>
+	      		<hr>
+	      		<h3>Sub Apartado para test</h3>
+	      		<p>Aqui va un contenido</p>
+		      </div>
+		    </div>
+		    <div class="col-sm-2 sidenav">
+		      <div class="well">
+		        <p>Indicador 1</p>
+		      </div>
+		      <div class="well">
+		        <p>Indicador 2</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<footer class="container-fluid text-center">
+	  		<p>Creado por Martuking</p>
+		</footer>
 	</body>
 </html>
